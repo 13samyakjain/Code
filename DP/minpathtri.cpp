@@ -8,6 +8,7 @@ public:
                 int d = triangle[i][j] + dp[i+1][j];
                 int dg = triangle[i][j] + dp[i+1][j+1];
                 dp[i][j] = min(d,dg);
+                
             }
         }
         return dp[0][0];
