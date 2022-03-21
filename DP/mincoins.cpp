@@ -6,6 +6,7 @@ class Solution{
             int n = nums.size();
             vector<vector<int>> dp(n,vector<int>(target+1,0));
             for(int i=0;i<=target;i++){
+                // for count use bool to set dp[0][i] = (i%nums[0]==0)
                 if(i%nums[0]==0)
                     dp[0][i] = i/nums[0];
             }
@@ -17,6 +18,7 @@ class Solution{
                     if(nums[i]<=target){
                         take = 1 + dp[i][target-nums[i]];
                     }
+                    /// for count use take + nottake
                     dp[i][target] = min(take,nottake);
                 }
             }
