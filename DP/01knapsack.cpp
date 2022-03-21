@@ -7,6 +7,7 @@ class Solution{
 
         vector<vector<int>> dp(n,vector<int> (Maxweight+1,0));
         for(int W=0;W<=Maxweight;W++){
+            // for unbounded case dp[0][w] = W/wt[0] * val[0]
             dp[0][W] = val[0];
         }
 
