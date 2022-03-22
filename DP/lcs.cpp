@@ -2,6 +2,8 @@
 using namespace std;
 class solution{
     public:
+
+    // for longest palindromic seq, call lcs with a string and other string with opposite s1
         int lcs(string s,string t){
             int n = s.size();
             int m = t.size();
