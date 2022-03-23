@@ -21,5 +21,7 @@ class solution{
                 }
             }
             return dp[n][m];
+
+            //for coverting string 1 to string 2 use lcs in which you have to find lcs of str1 and str2 after which w it will be str1.size() + str2.size() - 2*lcs(str1,str2)
         }
 }
