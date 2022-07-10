@@ -4,9 +4,7 @@ class Solution{
     public:
         string shortestSuperseq(string s,string t){
             int n = s.size();
-            int m = t.size();
-
-        
+            int m = t.size();        
             vector<vector<int>> dp(n+1,vector<int>(m+1,0));
             for(int i=0;i<=n;i++) dp[i][0] = 0;
             for(int j=0;j<=m;j++) dp[0][j] = 0;
@@ -31,7 +29,6 @@ class Solution{
                     j--;
                 }
             }
-
         while(i>0){
             ans+=s[i-1];
             i--;
